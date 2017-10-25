@@ -1,0 +1,1847 @@
+/* ----------------------------------------------------------------------------
+= Prinrt import - compiles to /css/print.css
+= Currently using Bourbon latest from CodeKit
+----------------------------------------------------------------------------- */
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+/*
+	Note: The "mobile-nav" breakpoint is only used to set when the regular 
+	nav goes away and the mobile nav shows up.
+	It can/might be the same as another breakpoint but 
+	is just here to help you get started. 
+*/
+/*
+	How To Use:
+	@include media($tablet){
+	
+	}
+	@include media($mobile){
+	
+	}
+
+*/
+/**************************************************************************************
+= CSS GRID STRUCTURE
+**************************************************************************************/
+/* Creating padding in each column.  Ex: 20px gutter is 10px padding on the left and 
+10px padding on the right */
+/* Number of Columns you wish to generate for your grid.  Default: 6 */
+/* Breakpoints for switching from desktop to tablet to mobile */
+.grid-container {
+  width: 100%; }
+  .grid-container .grid-row {
+    width: 100%;
+    max-width: 1335px;
+    margin: 0 auto;
+    position: relative; }
+    .grid-container .grid-row .grid-column::after {
+      clear: both;
+      content: "";
+      display: table; }
+    @media screen and (max-width: 899px) {
+      .grid-container .grid-row.is-grid-view .column-mobile-1 {
+        width: calc(100% * 0.1249);
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        float: left; } }
+    @media screen and (min-width: 900px) and (max-width: 1319px) {
+      .grid-container .grid-row.is-grid-view .column-tablet-1 {
+        width: calc(100% * 0.1249);
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        float: left; } }
+    @media screen and (min-width: 1320px) {
+      .grid-container .grid-row.is-grid-view .column-desktop-1 {
+        width: calc(100% * 0.1249);
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        float: left; } }
+    @media screen and (max-width: 899px) {
+      .grid-container .grid-row.is-grid-view .column-mobile-2 {
+        width: calc(100% * 0.2499);
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        float: left; } }
+    @media screen and (min-width: 900px) and (max-width: 1319px) {
+      .grid-container .grid-row.is-grid-view .column-tablet-2 {
+        width: calc(100% * 0.2499);
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        float: left; } }
+    @media screen and (min-width: 1320px) {
+      .grid-container .grid-row.is-grid-view .column-desktop-2 {
+        width: calc(100% * 0.2499);
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        float: left; } }
+    @media screen and (max-width: 899px) {
+      .grid-container .grid-row.is-grid-view .column-mobile-3 {
+        width: calc(100% * 0.3749);
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        float: left; } }
+    @media screen and (min-width: 900px) and (max-width: 1319px) {
+      .grid-container .grid-row.is-grid-view .column-tablet-3 {
+        width: calc(100% * 0.3749);
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        float: left; } }
+    @media screen and (min-width: 1320px) {
+      .grid-container .grid-row.is-grid-view .column-desktop-3 {
+        width: calc(100% * 0.3749);
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        float: left; } }
+    @media screen and (max-width: 899px) {
+      .grid-container .grid-row.is-grid-view .column-mobile-4 {
+        width: calc(100% * 0.4999);
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        float: left; } }
+    @media screen and (min-width: 900px) and (max-width: 1319px) {
+      .grid-container .grid-row.is-grid-view .column-tablet-4 {
+        width: calc(100% * 0.4999);
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        float: left; } }
+    @media screen and (min-width: 1320px) {
+      .grid-container .grid-row.is-grid-view .column-desktop-4 {
+        width: calc(100% * 0.4999);
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        float: left; } }
+    @media screen and (max-width: 899px) {
+      .grid-container .grid-row.is-grid-view .column-mobile-5 {
+        width: calc(100% * 0.6249);
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        float: left; } }
+    @media screen and (min-width: 900px) and (max-width: 1319px) {
+      .grid-container .grid-row.is-grid-view .column-tablet-5 {
+        width: calc(100% * 0.6249);
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        float: left; } }
+    @media screen and (min-width: 1320px) {
+      .grid-container .grid-row.is-grid-view .column-desktop-5 {
+        width: calc(100% * 0.6249);
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        float: left; } }
+    @media screen and (max-width: 899px) {
+      .grid-container .grid-row.is-grid-view .column-mobile-6 {
+        width: calc(100% * 0.7499);
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        float: left; } }
+    @media screen and (min-width: 900px) and (max-width: 1319px) {
+      .grid-container .grid-row.is-grid-view .column-tablet-6 {
+        width: calc(100% * 0.7499);
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        float: left; } }
+    @media screen and (min-width: 1320px) {
+      .grid-container .grid-row.is-grid-view .column-desktop-6 {
+        width: calc(100% * 0.7499);
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        float: left; } }
+    @media screen and (max-width: 899px) {
+      .grid-container .grid-row.is-grid-view .column-mobile-7 {
+        width: calc(100% * 0.8749);
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        float: left; } }
+    @media screen and (min-width: 900px) and (max-width: 1319px) {
+      .grid-container .grid-row.is-grid-view .column-tablet-7 {
+        width: calc(100% * 0.8749);
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        float: left; } }
+    @media screen and (min-width: 1320px) {
+      .grid-container .grid-row.is-grid-view .column-desktop-7 {
+        width: calc(100% * 0.8749);
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        float: left; } }
+    @media screen and (max-width: 899px) {
+      .grid-container .grid-row.is-grid-view .column-mobile-8 {
+        width: calc(100% * 0.9999);
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        float: left; } }
+    @media screen and (min-width: 900px) and (max-width: 1319px) {
+      .grid-container .grid-row.is-grid-view .column-tablet-8 {
+        width: calc(100% * 0.9999);
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        float: left; } }
+    @media screen and (min-width: 1320px) {
+      .grid-container .grid-row.is-grid-view .column-desktop-8 {
+        width: calc(100% * 0.9999);
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        float: left; } }
+    @media screen and (max-width: 899px) {
+      .grid-container .grid-row.is-list-view .column-mobile-1 {
+        width: 100%;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        clear: both;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important; } }
+    @media screen and (min-width: 900px) and (max-width: 1319px) {
+      .grid-container .grid-row.is-list-view .column-tablet-1 {
+        width: 100%;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important; } }
+    @media screen and (min-width: 1320px) {
+      .grid-container .grid-row.is-list-view .column-desktop-1 {
+        width: 100%;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important; } }
+    @media screen and (max-width: 899px) {
+      .grid-container .grid-row.is-list-view .column-mobile-2 {
+        width: 100%;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        clear: both;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important; } }
+    @media screen and (min-width: 900px) and (max-width: 1319px) {
+      .grid-container .grid-row.is-list-view .column-tablet-2 {
+        width: 100%;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important; } }
+    @media screen and (min-width: 1320px) {
+      .grid-container .grid-row.is-list-view .column-desktop-2 {
+        width: 100%;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important; } }
+    @media screen and (max-width: 899px) {
+      .grid-container .grid-row.is-list-view .column-mobile-3 {
+        width: 100%;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        clear: both;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important; } }
+    @media screen and (min-width: 900px) and (max-width: 1319px) {
+      .grid-container .grid-row.is-list-view .column-tablet-3 {
+        width: 100%;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important; } }
+    @media screen and (min-width: 1320px) {
+      .grid-container .grid-row.is-list-view .column-desktop-3 {
+        width: 100%;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important; } }
+    @media screen and (max-width: 899px) {
+      .grid-container .grid-row.is-list-view .column-mobile-4 {
+        width: 100%;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        clear: both;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important; } }
+    @media screen and (min-width: 900px) and (max-width: 1319px) {
+      .grid-container .grid-row.is-list-view .column-tablet-4 {
+        width: 100%;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important; } }
+    @media screen and (min-width: 1320px) {
+      .grid-container .grid-row.is-list-view .column-desktop-4 {
+        width: 100%;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important; } }
+    @media screen and (max-width: 899px) {
+      .grid-container .grid-row.is-list-view .column-mobile-5 {
+        width: 100%;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        clear: both;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important; } }
+    @media screen and (min-width: 900px) and (max-width: 1319px) {
+      .grid-container .grid-row.is-list-view .column-tablet-5 {
+        width: 100%;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important; } }
+    @media screen and (min-width: 1320px) {
+      .grid-container .grid-row.is-list-view .column-desktop-5 {
+        width: 100%;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important; } }
+    @media screen and (max-width: 899px) {
+      .grid-container .grid-row.is-list-view .column-mobile-6 {
+        width: 100%;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        clear: both;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important; } }
+    @media screen and (min-width: 900px) and (max-width: 1319px) {
+      .grid-container .grid-row.is-list-view .column-tablet-6 {
+        width: 100%;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important; } }
+    @media screen and (min-width: 1320px) {
+      .grid-container .grid-row.is-list-view .column-desktop-6 {
+        width: 100%;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important; } }
+    @media screen and (max-width: 899px) {
+      .grid-container .grid-row.is-list-view .column-mobile-7 {
+        width: 100%;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        clear: both;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important; } }
+    @media screen and (min-width: 900px) and (max-width: 1319px) {
+      .grid-container .grid-row.is-list-view .column-tablet-7 {
+        width: 100%;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important; } }
+    @media screen and (min-width: 1320px) {
+      .grid-container .grid-row.is-list-view .column-desktop-7 {
+        width: 100%;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important; } }
+    @media screen and (max-width: 899px) {
+      .grid-container .grid-row.is-list-view .column-mobile-8 {
+        width: 100%;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        clear: both;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important; } }
+    @media screen and (min-width: 900px) and (max-width: 1319px) {
+      .grid-container .grid-row.is-list-view .column-tablet-8 {
+        width: 100%;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important; } }
+    @media screen and (min-width: 1320px) {
+      .grid-container .grid-row.is-list-view .column-desktop-8 {
+        width: 100%;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important; } }
+
+/* ----------------------------------------------------------------------------
+= Reset using normalize.css v3.0.1 | MIT License | git.io/normalize
+----------------------------------------------------------------------------- */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio, canvas, progress, video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden], template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active, a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b, strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  margin: 0.67em 0;
+  font-size: 2em; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  color: #000;
+  background: #ff0; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub, sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button, input, optgroup, select, textarea {
+  margin: 0;
+  /* 3 */
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button, select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button, html input[type='button'],
+input[type='reset'], input[type='submit'] {
+  cursor: pointer;
+  /* 3 */
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type='checkbox'], input[type='radio'] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type='number']::-webkit-inner-spin-button, input[type='number']::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type='search'] {
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-appearance: textfield;
+  /* 1 */ }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type='search']::-webkit-search-cancel-button, input[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+  border: 1px solid #c0c0c0; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  padding: 0;
+  /* 2 */
+  border: 0;
+  /* 1 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-spacing: 0;
+  border-collapse: collapse; }
+
+td, th {
+  padding: 0; }
+
+/* ----------------------------------------------------------------------------
+= SETUP FILE includes fonts, colors, media query values, custom mixins, utility classes
+= Last updated July 2015
+----------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------
+= SELECTOR SORTING
+= *) SASS Variable, Mixin, Include, Extend, Clearfix
+= *) Positioning, Display & Box Model, Overflow, Floats
+= *) Flexbox rules (if used)
+= *) Sizing (Width and Height)
+= *) Padding, Margin
+= *) Colors, Borders, Backgrounds, Opacity (No Text Colors)
+= *) Text Related Items (Including Text Colors)
+= *) Enhancements, Animations, others
+= *) Psuedo Elements
+= *) Any overrides needed to reset included rules from mixins
+----------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------
+= DEVELOPER NOTES
+= *) using Bourbon latest (via Codekit)
+= *) Sass set to compile extended, set to compressed before launch
+= *) set to compile SASS with libsass (via Codekit)
+= *) using FontAwesome Font with CSS link (in head_extra view)
+----------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------
+=fonts - name like $fontname: 'name';
+----------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------
+=color swatches - name like $color-colorname: #000000; // Example Name
+----------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------
+=media queries = Located in _grid-settings.scss
+----------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------
+=custom mixins
+=currently importing default mixins from Bourbon
+=reference default mixin calls at http://bourbon.io/docs/
+----------------------------------------------------------------------------- */
+.ir {
+  display: block;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  white-space: nowrap;
+  text-indent: 100%;
+  direction: ltr; }
+
+/* Hide for both screenreaders and browsers
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden {
+  display: none;
+  visibility: hidden; }
+
+.clearfix {
+  zoom: 1; }
+  .clearfix:before, .clearfix:after {
+    display: block;
+    visibility: hidden;
+    height: 0;
+    content: '\0020'; }
+  .clearfix:after {
+    clear: both; }
+
+.clear {
+  clear: both; }
+
+@media screen and (max-width: 700px) {
+  .hide_mobile {
+    display: none; } }
+
+.show_mobile {
+  display: none; }
+  @media screen and (max-width: 700px) {
+    .show_mobile {
+      display: block; } }
+
+.visuallyhidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px); }
+
+.invisible {
+  visibility: hidden; }
+
+:root {
+  font-size: 15px; }
+  @media screen and (min-width: 600px) {
+    :root {
+      font-size: calc( 15px +  (20 - 15) *  ( (100vw - 600px) / (1000 - 600) )); } }
+  @media screen and (min-width: 1000px) {
+    :root {
+      font-size: 20px; } }
+
+/* ----------------------------------------------------------------------------
+= Default text styles
+----------------------------------------------------------------------------- */
+a, a:visited {
+  color: black;
+  border: none;
+  outline: none;
+  text-decoration: none; }
+  a:hover, a:focus, a:visited:hover, a:visited:focus {
+    color: #882345;
+    text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+  padding: 0;
+  color: black;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+  font-weight: 400;
+  text-transform: uppercase;
+  max-width: 1140px;
+  padding: 0px 20px;
+  width: 100%;
+  margin: 0 auto; }
+  h1 a, h1 a:visited, h2 a, h2 a:visited, h3 a, h3 a:visited, h4 a, h4 a:visited, h5 a, h5 a:visited, h6 a, h6 a:visited {
+    text-decoration: none; }
+
+h4, h5, h6 {
+  margin-bottom: 22px; }
+
+h1 {
+  font-size: 2.44141rem;
+  margin-bottom: 52px;
+  padding-bottom: 34px;
+  position: relative;
+  padding-top: 4rem; }
+  h1:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    background: #f1f1f1;
+    height: 3px;
+    width: calc(100% - 40px);
+    max-width: 1100px; }
+
+.textarea h1 {
+  padding-top: 0px; }
+.textarea a, .textarea a:visited {
+  font-weight: 600;
+  font-style: italic;
+  text-decoration: underline; }
+  .textarea a:hover, .textarea a:focus, .textarea a:visited:hover, .textarea a:visited:focus {
+    text-decoration: none; }
+
+h2 {
+  font-size: 1.95313rem;
+  margin-bottom: 30px; }
+  h2 + .faq {
+    margin-top: 0px; }
+
+h3 {
+  font-size: 1.5625rem;
+  margin-bottom: 30px; }
+
+h4 {
+  font-size: 1.25rem; }
+
+h5 {
+  font-size: 1rem; }
+
+h6 {
+  font-size: 0.9rem; }
+
+p, address, .p, tr td {
+  max-width: 1140px;
+  padding: 0px 20px;
+  width: 100%;
+  margin: 0 auto;
+  color: black;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  margin-bottom: 30px; }
+  p.lead, address.lead, .p.lead, tr td.lead {
+    font-size: 1.333rem;
+    margin-bottom: 48px; }
+  p:last-child, address:last-child, .p:last-child, tr td:last-child {
+    margin-bottom: 60px; }
+
+blockquote {
+  background-color: #882345;
+  background-image: url("../images/icons/quotes.svg");
+  background-position: 28px -124px;
+  background-repeat: no-repeat;
+  margin: 0px;
+  max-width: 1320px;
+  margin-top: 4rem;
+  margin-left: auto;
+  padding: 60px 30px;
+  padding-right: 50px;
+  position: relative;
+  margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin: 0 auto; */ }
+  @media screen and (max-width: 1140px) {
+    blockquote {
+      width: 100%;
+      min-width: auto;
+      padding-left: 20px;
+      padding-right: 40px; } }
+  blockquote:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -23px;
+    left: -23px;
+    max-width: 1320px;
+    border: 3px solid #882345; }
+  blockquote:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -20px;
+    left: -20px;
+    max-width: 1320px;
+    border: 3px solid white; }
+  blockquote p {
+    margin: 0px;
+    font-size: 1.333rem;
+    color: white;
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px; }
+    blockquote p.author {
+      position: absolute;
+      top: 100%;
+      color: black;
+      right: 0px;
+      max-width: none;
+      margin: 0px;
+      width: auto;
+      font-family: "Oswald", sans-serif;
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: 1rem;
+      padding-top: 6px; }
+      blockquote p.author strong {
+        position: relative;
+        margin-right: 15px;
+        font-weight: 400; }
+        blockquote p.author strong:after {
+          content: " | ";
+          position: absolute;
+          left: calc(100% + 5px);
+          top: 1px; }
+    blockquote p a, blockquote p a:visited {
+      text-decoration: underline; }
+      blockquote p a:hover, blockquote p a:focus, blockquote p a:visited:hover, blockquote p a:visited:focus {
+        text-decoration: none; }
+
+b, strong {
+  font-weight: bold; }
+
+.content ul, .content ol, .faq ul, .faq ol, .link .description ul, .link .description ol, #jobs.detail .description ul, #jobs.detail .description ol {
+  list-style: none;
+  color: black;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  max-width: 1140px;
+  padding: 0px 20px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 52px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  .content ul li, .content ol li, .faq ul li, .faq ol li, .link .description ul li, .link .description ol li, #jobs.detail .description ul li, #jobs.detail .description ol li {
+    margin: 0;
+    padding: 0 0 6px 0;
+    list-style-type: inherit;
+    line-height: 130%;
+    margin-bottom: 12px; }
+  .content ul ul, .content ul ol, .content ol ul, .content ol ol, .faq ul ul, .faq ul ol, .faq ol ul, .faq ol ol, .link .description ul ul, .link .description ul ol, .link .description ol ul, .link .description ol ol, #jobs.detail .description ul ul, #jobs.detail .description ul ol, #jobs.detail .description ol ul, #jobs.detail .description ol ol {
+    margin: 0;
+    margin-top: 20px; }
+.content ul > li, .faq ul > li, .link .description ul > li, #jobs.detail .description ul > li {
+  padding-left: 35px;
+  position: relative; }
+  .content ul > li:before, .faq ul > li:before, .link .description ul > li:before, #jobs.detail .description ul > li:before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #882345;
+    transform: rotate(63.6deg);
+    top: 5px;
+    left: 5px; }
+.content ol, .faq ol, .link .description ol, #jobs.detail .description ol {
+  counter-reset: li-counter; }
+.content ol > li, .faq ol > li, .link .description ol > li, #jobs.detail .description ol > li {
+  position: relative;
+  padding-left: 35px; }
+  .content ol > li:before, .faq ol > li:before, .link .description ol > li:before, #jobs.detail .description ol > li:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    color: #882345;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
+    content: counter(li-counter) ".";
+    counter-increment: li-counter; }
+
+hr {
+  clear: both;
+  margin-bottom: 52px;
+  background: #f1f1f1;
+  height: 3px;
+  width: calc(100% - 40px);
+  border: 0px;
+  max-width: 1100px; }
+
+/* ----------------------------------------------------------------------------
+=Tables
+----------------------------------------------------------------------------- */
+table {
+  position: relative;
+  margin: 0 0 15px; }
+  table tr {
+    color: black;
+    font-size: 12px; }
+    table tr td {
+      padding: 5px;
+      border: none; }
+
+tr {
+  font-size: 12px; }
+  tr td {
+    margin-bottom: 0;
+    padding: 5px;
+    border: none; }
+
+/* ----------------------------------------------------------------------------
+= News List
+----------------------------------------------------------------------------- */
+.news_list .entry {
+  max-width: 1100px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 52px;
+  padding-bottom: 40px;
+  border-bottom: 3px solid #f1f1f1; }
+  .news_list .entry .info h3 {
+    padding: 0px; }
+  .news_list .entry .info p {
+    padding: 0px; }
+
+/* ----------------------------------------------------------------------------
+= News Detail
+----------------------------------------------------------------------------- */
+.news_detail .overview {
+  margin-top: 4rem; }
+  .news_detail .overview span.date {
+    display: block;
+    max-width: 1140px;
+    padding: 0px 20px;
+    margin: 0 auto;
+    font-family: "Oswald", sans-serif;
+    color: #882345;
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+    font-weight: 300;
+    margin-bottom: 12px; }
+
+#news.detail #branding {
+  max-width: 1320px;
+  margin: 0 auto; }
+  #news.detail #branding img {
+    display: block;
+    width: 100%; }
+  #news.detail #branding + .overview {
+    margin-top: 1rem; }
+
+/* ----------------------------------------------------------------------------
+= Event List
+----------------------------------------------------------------------------- */
+.events {
+  zoom: 1; }
+  .events:before, .events:after {
+    display: block;
+    visibility: hidden;
+    height: 0;
+    content: '\0020'; }
+  .events:after {
+    clear: both; }
+
+#loadMoreEvents[disabled="disabled"] {
+  display: none; }
+
+#loadMoreEvents {
+  clear: both;
+  float: none;
+  margin: 40px auto; }
+
+.current_events.hide {
+  display: none; }
+
+.m-eventList__wrapper .grid-row {
+  z-index: 0; }
+
+.m-eventList {
+  opacity: 0;
+  transition: opacity 300ms linear; }
+
+.m-eventlist-overview {
+  position: relative;
+  max-width: 1360px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1; }
+  .m-eventlist-overview h1 {
+    width: 100%;
+    max-width: none; }
+    @media screen and (max-width: 600px) {
+      .m-eventlist-overview h1 {
+        margin-bottom: 30px; } }
+    .m-eventlist-overview h1:after {
+      max-width: 1360px; }
+  .m-eventlist-overview .view_type {
+    position: absolute;
+    right: 20px;
+    top: calc(50% + 20px);
+    transform: translateY(-50%); }
+    @media screen and (max-width: 600px) {
+      .m-eventlist-overview .view_type {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: 100%;
+        padding: 0px 20px;
+        margin-bottom: 30px; } }
+  .m-eventlist-overview .m-eventlist-views {
+    display: block;
+    float: left; }
+    @media screen and (max-width: 900px) {
+      .m-eventlist-overview .m-eventlist-views {
+        display: none; } }
+  .m-eventlist-overview .events-by-category, .m-eventlist-overview .events-by-venue {
+    float: left;
+    margin-right: 7.5rem;
+    transition: all 150ms linear; }
+    @media screen and (max-width: 1100px) {
+      .m-eventlist-overview .events-by-category, .m-eventlist-overview .events-by-venue {
+        margin-right: 0px; } }
+    @media screen and (max-width: 600px) {
+      .m-eventlist-overview .events-by-category, .m-eventlist-overview .events-by-venue {
+        width: 100%; } }
+    .m-eventlist-overview .events-by-category .select-dropdown, .m-eventlist-overview .events-by-venue .select-dropdown {
+      width: 16rem;
+      height: 50px;
+      background: #f1f1f1;
+      transition: all 150ms linear; }
+      @media screen and (max-width: 600px) {
+        .m-eventlist-overview .events-by-category .select-dropdown, .m-eventlist-overview .events-by-venue .select-dropdown {
+          width: 100%; } }
+      .m-eventlist-overview .events-by-category .select-dropdown .select-list, .m-eventlist-overview .events-by-venue .select-dropdown .select-list {
+        display: none;
+        list-style: none;
+        padding: 20px;
+        margin: 0px;
+        border: 3px solid #f1f1f1;
+        border-top: 0px;
+        background: white; }
+        .m-eventlist-overview .events-by-category .select-dropdown .select-list li a, .m-eventlist-overview .events-by-venue .select-dropdown .select-list li a {
+          line-height: 44px;
+          font-family: "Oswald", sans-serif;
+          font-size: 0.8rem;
+          font-weight: 400;
+          text-transform: uppercase;
+          letter-spacing: 0.03em;
+          cursor: pointer; }
+          .m-eventlist-overview .events-by-category .select-dropdown .select-list li a:hover, .m-eventlist-overview .events-by-category .select-dropdown .select-list li a:focus, .m-eventlist-overview .events-by-venue .select-dropdown .select-list li a:hover, .m-eventlist-overview .events-by-venue .select-dropdown .select-list li a:focus {
+            text-decoration: none; }
+      .m-eventlist-overview .events-by-category .select-dropdown.is-open, .m-eventlist-overview .events-by-venue .select-dropdown.is-open {
+        background: white; }
+    .m-eventlist-overview .events-by-category .select-button.label, .m-eventlist-overview .events-by-venue .select-button.label {
+      display: block;
+      padding: 0px 20px;
+      line-height: 44px;
+      font-family: "Oswald", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      position: relative;
+      cursor: pointer;
+      border: 3px solid #f1f1f1; }
+      .m-eventlist-overview .events-by-category .select-button.label:after, .m-eventlist-overview .events-by-venue .select-button.label:after {
+        content: "\f078";
+        font-family: "FontAwesome";
+        position: absolute;
+        right: 20px;
+        font-size: 0.7rem;
+        transition: all 150ms linear; }
+      .m-eventlist-overview .events-by-category .select-button.label.is-open:after, .m-eventlist-overview .events-by-venue .select-button.label.is-open:after {
+        transform: rotate(180deg);
+        color: #882345;
+        right: 22px; }
+  .m-eventlist-overview .m-eventList__toggle-item {
+    height: 43px;
+    width: 53px;
+    display: block;
+    float: left;
+    position: relative;
+    margin-left: 15px;
+    cursor: pointer; }
+    .m-eventlist-overview .m-eventList__toggle-item svg {
+      fill: #a4a4a4;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 45px;
+      transform: translate(-50%, -50%); }
+    .m-eventlist-overview .m-eventList__toggle-item:hover svg {
+      fill: #882345; }
+    .m-eventlist-overview .m-eventList__toggle-item.m-eventList__toggle-isActive {
+      border: 1px solid black; }
+      .m-eventlist-overview .m-eventList__toggle-item.m-eventList__toggle-isActive svg {
+        fill: #882345; }
+
+.event_list.m-eventList__grid .p-listing {
+  max-width: 321px;
+  min-height: 366px;
+  float: none;
+  margin-left: auto;
+  margin-right: auto; }
+  .event_list.m-eventList__grid .p-listing:hover .p-listing__thumb .m-eventItem__buttons {
+    opacity: 1; }
+    .event_list.m-eventList__grid .p-listing:hover .p-listing__thumb .m-eventItem__buttons .btn--tilted:after {
+      width: 100px;
+      height: 100px; }
+@media screen and (max-width: 1024px) {
+  .event_list.m-eventList__grid .grid-column:nth-child(2n) .p-listing {
+    float: left; }
+  .event_list.m-eventList__grid .grid-column:nth-child(2n+1) {
+    clear: both; }
+    .event_list.m-eventList__grid .grid-column:nth-child(2n+1) .p-listing {
+      float: right; } }
+.event_list.m-eventList__grid .p-listing__date, .event_list.m-eventList__grid .p-listing__title, .event_list.m-eventList__grid .p-listing__tagline {
+  padding: 0px; }
+.event_list.m-eventList__grid .p-listing__date {
+  clear: both;
+  line-height: 24px; }
+  .event_list.m-eventList__grid .p-listing__date .m-date__year {
+    display: none; }
+  .event_list.m-eventList__grid .p-listing__date .venue_title {
+    font-size: 15px; }
+.event_list.m-eventList__grid .p-listing__title.m-eventItem__title-withTagline {
+  margin-bottom: 5px; }
+.event_list.m-eventList__grid .p-listing__thumb {
+  max-height: 231px;
+  overflow: hidden; }
+  .event_list.m-eventList__grid .p-listing__thumb:hover img {
+    opacity: 1; }
+  .event_list.m-eventList__grid .p-listing__thumb .m-eventItem__buttons {
+    display: block;
+    transition: all 150ms linear;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7); }
+    .event_list.m-eventList__grid .p-listing__thumb .m-eventItem__buttons .btn-group {
+      position: relative;
+      height: 100%; }
+    .event_list.m-eventList__grid .p-listing__thumb .m-eventItem__buttons .btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      line-height: 56px; }
+      .event_list.m-eventList__grid .p-listing__thumb .m-eventItem__buttons .btn svg {
+        fill: white;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px; }
+      .event_list.m-eventList__grid .p-listing__thumb .m-eventItem__buttons .btn .button_text {
+        display: block;
+        clear: both;
+        line-height: 20px; }
+.event_list.m-eventList__grid .grid-info-holder {
+  clear: both;
+  height: 115px;
+  background: white;
+  width: calc(100% - 20px);
+  margin-left: 20px;
+  position: relative; }
+  .event_list.m-eventList__grid .grid-info-holder .grid-info {
+    position: absolute;
+    bottom: 0px;
+    background: white;
+    padding: 12px 15px;
+    width: 100%; }
+.event_list.m-eventList__grid .m-eventItem__buttons {
+  display: none; }
+.event_list.m-eventList__list {
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2.5px; }
+  .event_list.m-eventList__list .p-listing:not(.staysGrid) {
+    border-bottom: 3px solid #f1f1f1;
+    margin-bottom: 10px;
+    padding-bottom: 10px; }
+    .event_list.m-eventList__list .p-listing:not(.staysGrid) .p-listing__date, .event_list.m-eventList__list .p-listing:not(.staysGrid) .p-listing__title, .event_list.m-eventList__list .p-listing:not(.staysGrid) .p-listing__tagline {
+      padding: 0px 20px;
+      width: calc(70% - 155px);
+      float: left; }
+    .event_list.m-eventList__list .p-listing:not(.staysGrid) .p-listing__date {
+      margin-top: 20px; }
+      @media screen and (max-width: 500px) {
+        .event_list.m-eventList__list .p-listing:not(.staysGrid) .p-listing__date {
+          max-width: calc(100% - 126px);
+          min-width: calc(100% - 321px);
+          width: 70%; }
+          .event_list.m-eventList__list .p-listing:not(.staysGrid) .p-listing__date .delimiter {
+            display: none; }
+          .event_list.m-eventList__list .p-listing:not(.staysGrid) .p-listing__date .venue_title {
+            clear: both;
+            display: block;
+            margin-top: 10px;
+            font-size: 15px; } }
+      .event_list.m-eventList__list .p-listing:not(.staysGrid) .p-listing__date .m-date__year {
+        display: none; }
+    .event_list.m-eventList__list .p-listing:not(.staysGrid) .m-eventItem {
+      border-bottom: 3px solid #f1f1f1;
+      padding-bottom: 10px;
+      margin-bottom: 10px; }
+      .event_list.m-eventList__list .p-listing:not(.staysGrid) .m-eventItem__thumb {
+        width: 30%;
+        max-width: 222px;
+        min-width: 126px;
+        max-height: 162px;
+        overflow: hidden; }
+        .event_list.m-eventList__list .p-listing:not(.staysGrid) .m-eventItem__thumb .m-eventItem__buttons {
+          display: none; }
+      @media screen and (max-width: 500px) {
+        .event_list.m-eventList__list .p-listing:not(.staysGrid) .m-eventItem__title {
+          clear: both;
+          width: 100%;
+          padding: 0px; } }
+      .event_list.m-eventList__list .p-listing:not(.staysGrid) .m-eventItem__title-withTagline {
+        margin-bottom: 5px; }
+      @media screen and (max-width: 500px) {
+        .event_list.m-eventList__list .p-listing:not(.staysGrid) .m-eventItem__tagline {
+          clear: both;
+          width: 100%;
+          padding: 0px; } }
+      .event_list.m-eventList__list .p-listing:not(.staysGrid) .m-eventItem__buttons {
+        position: absolute;
+        top: 50%;
+        right: 0px;
+        transform: translateY(-50%); }
+        @media screen and (max-width: 500px) {
+          .event_list.m-eventList__list .p-listing:not(.staysGrid) .m-eventItem__buttons {
+            position: relative;
+            top: auto;
+            right: auto;
+            transform: none;
+            display: block;
+            clear: both; }
+            .event_list.m-eventList__list .p-listing:not(.staysGrid) .m-eventItem__buttons .btn {
+              padding: 0px; }
+            .event_list.m-eventList__list .p-listing:not(.staysGrid) .m-eventItem__buttons .btn.btn--text-default {
+              float: left;
+              border-bottom: 0px; }
+            .event_list.m-eventList__list .p-listing:not(.staysGrid) .m-eventItem__buttons .btn.more {
+              float: right;
+              clear: none; } }
+
+/* ----------------------------------------------------------------------------
+= Event Detail
+----------------------------------------------------------------------------- */
+.eventDetailContainer {
+  max-width: 1320px;
+  margin: 0 auto; }
+  .eventDetailContainer #branding {
+    min-height: 605px; }
+    @media screen and (max-width: 1024px) {
+      .eventDetailContainer #branding {
+        min-height: auto; } }
+    .eventDetailContainer #branding .full-slideshow {
+      margin: 0px; }
+    .eventDetailContainer #branding .rsDefault.rsVideoPlaying .rsGCaption {
+      display: none; }
+    .eventDetailContainer #branding img {
+      width: 100%; }
+    .eventDetailContainer #branding .rsGCaption {
+      bottom: auto;
+      top: 0px;
+      left: auto;
+      right: 0px; }
+      .eventDetailContainer #branding .rsGCaption p {
+        float: right; }
+  .eventDetailContainer .eventDetailContent {
+    position: relative;
+    min-height: 400px; }
+  .eventDetailContainer .eventDetailDescription {
+    position: relative; }
+    .eventDetailContainer .eventDetailDescription .descriptionBody {
+      max-height: 248px;
+      overflow: hidden;
+      transition: all 150ms linear; }
+    .eventDetailContainer .eventDetailDescription .eventDetailDescription__hide {
+      padding: 0px 20px;
+      font-family: "Oswald", sans-serif;
+      font-size: 16px;
+      letter-spacing: 0.03em;
+      font-weight: 300;
+      text-transform: uppercase;
+      cursor: pointer;
+      line-height: 16px;
+      position: relative;
+      width: 100%;
+      z-index: 1;
+      margin-bottom: 30px; }
+      .eventDetailContainer .eventDetailDescription .eventDetailDescription__hide:after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100px;
+        z-index: 0;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+90&0+0,1+90 */
+        background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 90%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 90%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 90%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+        /* IE6-9 */ }
+      .eventDetailContainer .eventDetailDescription .eventDetailDescription__hide:hover {
+        color: #882345; }
+      .eventDetailContainer .eventDetailDescription .eventDetailDescription__hide .first-word {
+        font-weight: 400; }
+    .eventDetailContainer .eventDetailDescription .eventDetailDescription__trigger-isClosed {
+      float: left; }
+      .eventDetailContainer .eventDetailDescription .eventDetailDescription__trigger-isClosed:after {
+        content: "\f067";
+        font-family: "FontAwesome";
+        margin-left: 10px; }
+    .eventDetailContainer .eventDetailDescription .eventDetailDescription__trigger-isOpen {
+      display: none;
+      float: left; }
+      .eventDetailContainer .eventDetailDescription .eventDetailDescription__trigger-isOpen:after {
+        content: "\f068";
+        font-family: "FontAwesome";
+        margin-left: 10px; }
+    .eventDetailContainer .eventDetailDescription-isActive .eventDetailDescription__hide:after {
+      content: none; }
+    .eventDetailContainer .eventDetailDescription-isActive .eventDetailDescription__trigger-isOpen {
+      display: block; }
+    .eventDetailContainer .eventDetailDescription-isActive .eventDetailDescription__trigger-isClosed {
+      display: none; }
+  .eventDetailContainer .eventDetailColumn {
+    max-width: 876px;
+    width: calc(100% - 352px); }
+    @media screen and (max-width: 1024px) {
+      .eventDetailContainer .eventDetailColumn {
+        width: 100%;
+        max-width: none; } }
+    .eventDetailContainer .eventDetailColumn .faq {
+      margin-top: 0px; }
+    .eventDetailContainer .eventDetailColumn .eventInfo {
+      position: absolute;
+      top: 40px;
+      transform: translateY(-100%);
+      background: white;
+      left: 20px;
+      padding: 10px 20px;
+      max-width: 685px; }
+      @media screen and (max-width: 1320px) {
+        .eventDetailContainer .eventDetailColumn .eventInfo {
+          left: 0px; } }
+      .eventDetailContainer .eventDetailColumn .eventInfo .date {
+        font-family: "Oswald", sans-serif;
+        font-weight: 300;
+        line-height: 1.55rem;
+        letter-spacing: 0.03em; }
+      .eventDetailContainer .eventDetailColumn .eventInfo .m-date__year {
+        display: none; }
+      .eventDetailContainer .eventDetailColumn .eventInfo .title {
+        clear: both;
+        display: block;
+        width: 100%;
+        font-size: 2.45rem;
+        line-height: 2.7rem;
+        font-family: "Oswald", sans-serif;
+        letter-spacing: 0.03em;
+        text-transform: uppercase; }
+      .eventDetailContainer .eventDetailColumn .eventInfo .tagline {
+        font-family: "Raleway", sans-serif;
+        font-size: 1.35rem;
+        letter-spacing: 0.02em; }
+      @media screen and (max-width: 1024px) {
+        .eventDetailContainer .eventDetailColumn .eventInfo {
+          display: none; } }
+    .eventDetailContainer .eventDetailColumn .content {
+      padding-top: 80px;
+      padding-left: 20px;
+      padding-right: 20px; }
+      @media screen and (max-width: 1320px) {
+        .eventDetailContainer .eventDetailColumn .content {
+          padding-left: 0px;
+          padding-right: 0px; } }
+      @media screen and (max-width: 1024px) {
+        .eventDetailContainer .eventDetailColumn .content {
+          padding-top: 20px; } }
+  .eventDetailContainer aside {
+    width: 332px;
+    position: absolute;
+    top: 0px;
+    right: 0px; }
+    @media screen and (max-width: 1320px) {
+      .eventDetailContainer aside {
+        right: 20px; } }
+    @media screen and (max-width: 1024px) {
+      .eventDetailContainer aside {
+        width: 100%;
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-top: 80px; } }
+    .eventDetailContainer aside .rightBreakout {
+      position: relative;
+      padding-top: 80px;
+      width: 332px; }
+      @media screen and (max-width: 1024px) {
+        .eventDetailContainer aside .rightBreakout {
+          width: auto; } }
+      .eventDetailContainer aside .rightBreakout .mobile-details {
+        display: none; }
+        .eventDetailContainer aside .rightBreakout .mobile-details .eventInfo {
+          padding: 10px 20px;
+          max-width: 685px; }
+          .eventDetailContainer aside .rightBreakout .mobile-details .eventInfo .date {
+            font-family: "Oswald", sans-serif;
+            font-weight: 300;
+            line-height: 1.55rem;
+            letter-spacing: 0.03em; }
+          .eventDetailContainer aside .rightBreakout .mobile-details .eventInfo .m-date__year {
+            display: none; }
+          .eventDetailContainer aside .rightBreakout .mobile-details .eventInfo .title {
+            clear: both;
+            display: block;
+            width: 100%;
+            font-size: 2.45rem;
+            line-height: 2.7rem;
+            font-family: "Oswald", sans-serif;
+            letter-spacing: 0.03em;
+            text-transform: uppercase; }
+          .eventDetailContainer aside .rightBreakout .mobile-details .eventInfo .tagline {
+            font-family: "Raleway", sans-serif;
+            font-size: 1.35rem;
+            letter-spacing: 0.02em; }
+        @media screen and (max-width: 1024px) {
+          .eventDetailContainer aside .rightBreakout .mobile-details {
+            display: block; } }
+    .eventDetailContainer aside .detailList {
+      list-style: none;
+      padding: 0px; }
+      .eventDetailContainer aside .detailList .detailItem {
+        background: #f1f1f1;
+        border-bottom: 1px solid white;
+        padding: 20px;
+        zoom: 1; }
+        .eventDetailContainer aside .detailList .detailItem:before, .eventDetailContainer aside .detailList .detailItem:after {
+          display: block;
+          visibility: hidden;
+          height: 0;
+          content: '\0020'; }
+        .eventDetailContainer aside .detailList .detailItem:after {
+          clear: both; }
+        .eventDetailContainer aside .detailList .detailItem label {
+          font-family: "Oswald", sans-serif;
+          font-size: 1rem;
+          display: block;
+          width: 100%;
+          float: left;
+          margin-bottom: 10px;
+          text-transform: uppercase; }
+        .eventDetailContainer aside .detailList .detailItem span, .eventDetailContainer aside .detailList .detailItem a, .eventDetailContainer aside .detailList .detailItem p {
+          float: left;
+          font-family: "Raleway", sans-serif;
+          font-size: 0.75rem;
+          letter-spacing: 0.02em; }
+        .eventDetailContainer aside .detailList .detailItem .m-date__singleDate span {
+          float: none; }
+        .eventDetailContainer aside .detailList .detailItem a {
+          text-decoration: underline; }
+        .eventDetailContainer aside .detailList .detailItem p {
+          padding: 0px;
+          margin: 0px; }
+    .eventDetailContainer aside .button {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 10px; }
+      .eventDetailContainer aside .button .btn--tilted:after {
+        height: 118px;
+        width: 118px; }
+      .eventDetailContainer aside .button .btn--tilted {
+        padding: 0px;
+        width: 118px; }
+        .eventDetailContainer aside .button .btn--tilted svg {
+          fill: white;
+          display: block;
+          margin: 0 auto; }
+        .eventDetailContainer aside .button .btn--tilted .button_text {
+          clear: both;
+          display: block;
+          margin: 0 auto; }
+  .eventDetailContainer .eventDetailShowings .showings_header {
+    color: #882345; }
+  .eventDetailContainer .eventDetailShowings .show_hide_showings {
+    display: none;
+    padding: 0px 20px;
+    margin-bottom: 30px; }
+    .eventDetailContainer .eventDetailShowings .show_hide_showings .show_showings, .eventDetailContainer .eventDetailShowings .show_hide_showings .hide_showings {
+      font-family: "Oswald", sans-serif;
+      font-weight: 300;
+      font-size: 0.8rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      position: relative;
+      cursor: pointer; }
+      .eventDetailContainer .eventDetailShowings .show_hide_showings .show_showings:hover, .eventDetailContainer .eventDetailShowings .show_hide_showings .hide_showings:hover {
+        color: #882345; }
+      .eventDetailContainer .eventDetailShowings .show_hide_showings .show_showings .first-word, .eventDetailContainer .eventDetailShowings .show_hide_showings .hide_showings .first-word {
+        font-weight: 400; }
+    .eventDetailContainer .eventDetailShowings .show_hide_showings .show_showings:after {
+      content: "\f067";
+      font-family: "FontAwesome";
+      margin-left: 10px; }
+    .eventDetailContainer .eventDetailShowings .show_hide_showings .hide_showings {
+      display: none; }
+      .eventDetailContainer .eventDetailShowings .show_hide_showings .hide_showings:after {
+        content: "\f068";
+        font-family: "FontAwesome";
+        margin-left: 10px; }
+  .eventDetailContainer .eventDetailShowings.is-active .show_showings {
+    display: none; }
+  .eventDetailContainer .eventDetailShowings.is-active .hide_showings {
+    display: block; }
+  .eventDetailContainer .eventDetailShowings ul {
+    margin-bottom: 30px; }
+    .eventDetailContainer .eventDetailShowings ul.hide_extra {
+      max-height: 12.75rem;
+      overflow: hidden;
+      transition: max-height 150ms linear; }
+      .eventDetailContainer .eventDetailShowings ul.hide_extra + .show_hide_showings {
+        display: block; }
+    .eventDetailContainer .eventDetailShowings ul li {
+      padding: 0px;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid #f1f1f1;
+      display: flex;
+      flex-basis: auto;
+      flex-flow: row wrap; }
+  .eventDetailContainer .eventDetailShowings .date, .eventDetailContainer .eventDetailShowings .time {
+    font-weight: 300;
+    font-family: "Oswald", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+    flex: 1;
+    line-height: 40px; }
+  .eventDetailContainer .eventDetailShowings .time {
+    text-align: center; }
+  .eventDetailContainer .eventDetailShowings .ticket {
+    flex: 1; }
+  .eventDetailContainer .eventDetailShowings .date__day_of_week {
+    font-weight: 400;
+    text-transform: uppercase; }
+  .eventDetailContainer .eventDetailShowings .btn--text-default {
+    border-bottom: 0px;
+    float: right; }
+  .eventDetailContainer .eventDetailContent.noBranding .eventDetailColumn .eventInfo {
+    position: relative;
+    transform: none;
+    left: auto;
+    top: auto;
+    padding-left: 40px; }
+    @media screen and (max-width: 1320px) {
+      .eventDetailContainer .eventDetailContent.noBranding .eventDetailColumn .eventInfo {
+        padding-left: 20px; } }
+  .eventDetailContainer .eventDetailContent.noBranding aside {
+    margin-top: 60px; }
+
+#events.detail.videoPlaying .eventDetailColumn .eventInfo {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+  padding-left: 40px; }
+  @media screen and (max-width: 1320px) {
+    #events.detail.videoPlaying .eventDetailColumn .eventInfo {
+      padding-left: 20px; } }
+#events.detail.videoPlaying aside .rightBreakout {
+  margin-top: 80px; }
+
+/* ----------------------------------------------------------------------------
+=Textarea margin
+----------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------
+=Showtime Page Content
+----------------------------------------------------------------------------- */
+.content {
+  /* ----------------------------------------------------------------------------
+  =Image Templates
+  ----------------------------------------------------------------------------- */ }
+  .content img {
+    max-width: 100%; }
+    .content img[align=left], .content img[align=left].gh-image, .content img.left {
+      float: left;
+      margin: 0 30px 56px 0; }
+    .content img[align=right], .content img[align=right].gh-image, .content img.right {
+      float: right;
+      margin: 0 0 56px 30px; }
+    .content img.gh-image {
+      margin: 0 30px 56px 0;
+      padding: 0; }
+    .content img.image {
+      margin: 0 30px 56px 0;
+      padding: 0; }
+  .content iframe {
+    padding: 0px 20px; }
+
+/* ----------------------------------------------------------------------------
+= print styles
+----------------------------------------------------------------------------- */
+@media print {
+  * {
+    color: #444 !important;
+    background: transparent !important;
+    text-shadow: none !important; }
+
+  header, footer, #branding, #cal_holder, #fb_window, #fb-root, .paging, .buttons, .one_sidebar_right #column_2, .ticket, .faq, .banner, .addthis_toolbox, .print, .seating, .no_print {
+    display: none;
+    height: 0 !important; }
+
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline; }
+
+  a:after {
+    content: " (" attr(href) ")"; }
+
+  abbr:after {
+    content: " (" attr(title) ")"; }
+
+  .ir a:after {
+    content: ''; }
+
+  /* Don't show links for images */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group; }
+
+  /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img {
+    page-break-inside: avoid; }
+
+  @page {
+    margin: 0.5cm; }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2, h3 {
+    page-break-after: avoid; }
+
+  h1 {
+    font-size: 18px; }
+
+  h2 {
+    font-size: 16px; }
+
+  h3 {
+    font-size: 14px; }
+
+  .news_tools {
+    display: none; }
+
+  .print_logo {
+    display: block;
+    width: 150px;
+    height: 44px;
+    padding-bottom: 10px; }
+
+  .print_map {
+    display: block;
+    margin: 0 auto;
+    text-align: center; }
+
+  #layout {
+    padding-top: 10px;
+    border-top: 1px solid #000; }
+
+  .event_list a:after {
+    content: ''; }
+
+  body#events.detail #column_1 .main_column {
+    width: 600px; }
+
+  body#events.detail #column_2 {
+    display: block; }
+
+  .column {
+    width: 100% !important; } }
