@@ -266,7 +266,7 @@
 		<div class="social_icon social_icon--instagram"><a href="http://www.instagram.com/playhousesquare" target="_blank" title="Instagram">Instagram</a></div>
 		<div class="social_icon social_icon--youtube"><a href="http://www.youtube.com/user/playhousesquare" target="_blank" title="Youtube">Youtube</a></div>
 	</div>		    </header>
-
+			<img src="helicopter.png" style="height: 45px;position: absolute;margin: -45px auto;right: 0px;" class="helicopter"/>
 		    <div id="content" class="clearfix">
 
 
@@ -642,6 +642,18 @@ Back by overwhelming demand,&nbsp;<strong>John Simonelli</strong>&nbsp;is return
   <script>
     $(document).ready(function(){
       console.log('doc ready');
+
+			function loop() {
+
+				$('.helicopter').animate({
+					right: "2000px"
+				}, 15000, 'linear', function(){
+					$(this).css({right: -100});
+					loop()
+				});
+			}
+
+			loop()
       $('.onsalenow').click(function(e){
         console.log('clicked')
         $('#dad_banner_img').fadeOut('slow');
